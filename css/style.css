@@ -112,9 +112,6 @@ p::selection{
 }
 
 
-small{
-    font-size: 21px;
-}
 
 
 small::selection{
@@ -244,7 +241,7 @@ small::selection{
         height: 120px;
     }
     .container .box{
-        height: 45vh; /* ? HEİGHT */
+        height: 47vh; /* ? HEİGHT */
     }
 }
 
