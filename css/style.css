@@ -112,6 +112,11 @@ p::selection{
 }
 
 
+small{
+    font-size: 21px;
+}
+
+
 small::selection{
     background-color: thistle;
     color: white;
