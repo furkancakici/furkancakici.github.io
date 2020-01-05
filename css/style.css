@@ -113,7 +113,7 @@ p::selection{
 
 
 small{
-    font-size: 21px;
+    font-size: calc(21px + 0.5vw);
 }
 
 
