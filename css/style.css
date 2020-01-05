@@ -106,6 +106,16 @@ h1, h2, p{
 }
 
 
+p::selection{
+    background-color: tomato;
+    color: white;
+}
+
+
+small::selection{
+    background-color: thistle;
+    color: white;
+}
 
 
 @media (min-width:300px){
