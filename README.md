@@ -1,3 +1,3 @@
-# furkancakici.github.io
+## PORTFOLYO İÇİN HAZIRLAMIŞ OLDUĞUM GİTHUB-PAGES SİTESİ
 
-PORTFOLYO SİTE : [LİNK](https://furkancakici.github.io/)
+>PORTFOLYO SİTE : [LİNK](https://furkancakici.github.io/)
