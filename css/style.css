@@ -1,247 +1,118 @@
-body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: 'Alatsi', sans-serif;
-    background: #ddd url(../images/bg.png) no-repeat center;
-    background-size: cover;
-    background-attachment: fixed;
-    overflow: hidden;
-    
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+/* 👋 HELLO 👋 */
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+body {
+   width: 100%;
+   height: 100vh;
+   background-color: #273c75;
+   font-family: 'Didact Gothic', sans-serif;
+   line-height: 1.7;
+   letter-spacing: 0.15rem;
+}
+
+.container {
+   width: 1140px;
+   height: 100%;
+   margin: 0 auto;
+   padding: 0 1rem;
+   min-width: 320px;
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+}
+
+.bio {
+   width: 960px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #f2f2f2;
+   font-size: 1.2rem;
+}
+
+.bio .bio__box .emoji {
+   font-size: 2.5rem;
+   margin: 1rem 0;
+}
+
+.bio .bio__box .name {
+   border-bottom: 1px solid #58c9b9;
+   transition: all 0.2s;
+}
+
+.bio .bio__box .name:hover {
+   border-bottom: 2px dashed #58c9b9;
+   cursor: pointer;
+}
+
+.list {
+   margin: 1rem 0;
+   list-style-type: none;
+}
+
+.hastag--list li{
+   display: inline-block;
+   color: #c9d6de;
+   position: relative;
+   cursor: pointer;
+   margin-right: .5rem;
+   transition: all 0.25s ease;
+}
+
+.hastag--list li:hover{
+   color: #fff;
+   font-weight: 800;
+}
+
+.hastag--list li::after{
+   content: "";
+   position: absolute;
+   top: 1.5rem;
+   left: 0;
+   width: 25%;
+   height: .3rem;
+   background-color: #e97f02;
+   transition: all 0.25s ease;
+}
+
+.hastag--list li:hover::after{
+   width: 100%;
 }
 
 
-/* Responsive Typography */
+.social--list li a{
+   display: inline-block;
+   cursor: pointer;
+   font-size: 1.3rem;
 
+   background-image: linear-gradient(#58c9b9, #58c9b8);
+   background-repeat: no-repeat;
+   background-size: 100% 0.45rem;
+   background-position: 0 85%;
+   transition: all 0.25s ease;
+}
 
-html{
-    font-size: calc(26px + 0.5vw);
-    line-height: calc(1.1em + 0.4vw);
+.social--list li a:hover{
+   background-size: 100% 1.75rem;
 }
 
 
-h1{
-    font-size: calc(20px + 1.5vw);
+/* Mobile */
+
+@media only screen and (min-width: 320px) and (max-width: 1280px) {
+   .container {
+      width: 100%;
+   }
 }
-
-h2{
-    font-size: 1.2em;
-}
-
-h1,h2{
-    font-weight: bold;
-}
-
-h1, h2, p{
-    margin: .5em 1vh;
-}
-
-
-
-
-
-.container{
-    width: 90%; /* ? WİDTH */
-    max-width: 1024px;
-    min-width: 300px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.container .box{
-    height: 50vh; /* ? HEİGHT */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 25vh;
-    color: #fff;
-    background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
-    border: 8px dashed #f09819;
-    outline: 6px dashed #c43a30;
-    border-radius: 10px;
-}
-
-
-.container .box .box-left, .box-right{
-    width: 100%;
-    height: 100%;
-}
-
-.container .box .box-left img{
-    width: 100%;
-    height: 100%;  
-    border-radius: 10px;  
-}
-
-.container .box #hashtag{
-    background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
-	-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-    font-weight: bold;
-    opacity: 0.7;
-}
-
-
-
-.socials a img{
-    width: 90px;
-    height: 90px;
-    transition: transform 1s, .5s ease-out;
-}
-
-
-.socials a img:hover{
-    transform: scale(1.2) rotate(5deg);
-}
-
-.socials {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    position: relative;
-    top: 75vh;
-}
-
-
-p::selection{
-    background-color: tomato;
-    color: white;
-}
-
-
-
-
-small::selection{
-    background-color: thistle;
-    color: white;
-}
-
-
-@media (min-width:300px){
-    html{
-        font-size: calc(11.5px + 0.5vw);
-    }
-
-    .socials a img{
-        width: 45px;
-        height: 45px;
-    }
-
-    .container .box{
-        height: 40vh; /* ? HEİGHT */
-    }
-}
-
-
-
-@media (min-width:350px){
-    html{
-        font-size: calc(13px + 0.5vw);
-    }
-
-    .socials a img{
-        width: 55px;
-        height: 55px;
-    }
-
-    .container .box{
-        height: 40vh; /* ? HEİGHT */
-    }
-}
-
-
-@media (min-width:375px){
-    html{
-        font-size: calc(13px + 0.5vw);
-    }
-
-    .socials a img{
-        width: 55px;
-        height: 55px;
-    }
-
-    .container .box{
-        height: 37vh; /* ? HEİGHT */
-    }
-}
-
-@media only screen and (min-width: 400px) {
-    html{
-        font-size: calc(14px + 0.5vw);
-    }
-
-    .socials a img{
-        width: 60px;
-        height: 60px;
-    }
-
-    .container .box{
-        height: 38vh; /* ? HEİGHT */
-    }
-    
-}
-
-@media only screen and (min-width: 600px) {
-    html{
-        font-size: calc(22px + 0.5vw);
-    }
-
-    .socials a img{
-        width: 85px;
-        height: 85px;
-    }
-    .container .box{
-        height: 45vh; /* ? HEİGHT */
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    html{
-        font-size: calc(26px + 0.5vw);
-    }
-
-    .socials a img{
-        width: 90px;
-        height: 90px;
-    }
-    .container .box{
-        height: 45vh; /* ? HEİGHT */
-    }
-
-}
-
-@media only screen and (min-width: 992px) {
-    html{
-        font-size: calc(24px + .5vw);
-    }
-
-    .socials a img{
-        width: 100px;
-        height: 1100px;
-    }
-    .container .box{
-        height: 45vh; /* ? HEİGHT */
-    }
-
-}
-
-
-
-@media only screen and (min-width: 1200px) {
-    html{
-        font-size: calc(25px + .5vw);
-        line-height: calc(1.1em + 0.4vw);
-    }
-
-    .socials a img{
-        width: 110px;
-        height: 110px;
-    }
-    .container .box{
-        height: 50vh; /* ? HEİGHT */
-    }
-}
-
