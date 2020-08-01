@@ -19,7 +19,7 @@ body {
    background-color: #273c75;
    font-family: 'Didact Gothic', sans-serif;
    line-height: 1.7;
-   letter-spacing: 0.15rem;
+   letter-spacing: 0.1rem
 }
 
 .container {
@@ -34,7 +34,7 @@ body {
 }
 
 .bio {
-   width: 960px;
+   width: 970px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -42,19 +42,24 @@ body {
    font-size: 1.2rem;
 }
 
-.bio .bio__box .emoji {
-   font-size: 2.5rem;
-   margin: 1rem 0;
+.bio .emoji {
+   font-size: 2.2rem;
+   margin: .2rem 0;
 }
 
-.bio .bio__box .name {
+.bio .name {
    border-bottom: 1px solid #58c9b9;
    transition: all 0.2s;
 }
 
-.bio .bio__box .name:hover {
+.bio .name:hover {
    border-bottom: 2px dashed #58c9b9;
    cursor: pointer;
+}
+
+.bio p{
+   margin: .8rem 0;
+   font-weight: 700;
 }
 
 .list {
@@ -73,7 +78,7 @@ body {
 
 .hastag--list li:hover{
    color: #fff;
-   font-weight: 800;
+   font-weight: 700;
 }
 
 .hastag--list li::after{
@@ -95,7 +100,7 @@ body {
 .social--list li a{
    display: inline-block;
    cursor: pointer;
-   font-size: 1.3rem;
+   font-size: 1.2rem;
 
    background-image: linear-gradient(#58c9b9, #58c9b8);
    background-repeat: no-repeat;
