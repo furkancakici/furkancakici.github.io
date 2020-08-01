@@ -13,13 +13,19 @@ a {
    color: inherit;
 }
 
+@font-face {
+   font-family: "Didact Gothic",sans-serif;
+   src: url("/font/DidactGothic-Regular.ttf") format("ttf");
+ }
+
 body {
    width: 100%;
    height: 100vh;
    background-color: #273c75;
-   font-family: 'Didact Gothic', sans-serif;
    line-height: 1.7;
-   letter-spacing: 0.1rem
+   letter-spacing: 0.1rem;
+   font-family: "Didact Gothic",sans-serif;
+
 }
 
 .container {
@@ -34,7 +40,7 @@ body {
 }
 
 .bio {
-   width: 970px;
+   width: 980px;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -58,8 +64,8 @@ body {
 }
 
 .bio p{
-   margin: .8rem 0;
-   font-weight: 700;
+   margin: 1rem 0;
+   font-weight: 900;
 }
 
 .list {
