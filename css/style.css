@@ -32,7 +32,7 @@ body {
    width: 1140px;
    height: 100%;
    margin: 0 auto;
-   padding: 0 1rem;
+   padding: 0 .8rem;
    min-width: 320px;
    display: flex;
    justify-content: center;
@@ -90,7 +90,7 @@ body {
 .hastag--list li::after{
    content: "";
    position: absolute;
-   top: 1.5rem;
+   top: 1.75rem;
    left: 0;
    width: 25%;
    height: .3rem;
