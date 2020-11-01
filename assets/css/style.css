@@ -15,7 +15,7 @@ a {
 
 @font-face {
    font-family: "Didact Gothic",sans-serif;
-   src: url("/font/DidactGothic-Regular.ttf") format("ttf");
+   src: url("assets/font/DidactGothic-Regular.ttf") format("ttf");
  }
 
 body {
