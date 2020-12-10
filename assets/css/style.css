@@ -2,6 +2,10 @@
 
 /* 👋 HELLO 👋 */
 
+:root {
+   --transition: all 0.25s ease-out;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -15,13 +19,13 @@ a {
 
 body {
    font-family: 'Didact Gothic', sans-serif;
-   background-color: #273c75;
    line-height: 1.7;
    letter-spacing: 0.1rem;
    min-width: 320px;
    width: 100vw;
    height: 100vh;
    overflow: hidden;
+   
    background: linear-gradient(224deg, #6315e8, #3d0a94);
    background-size: 400% 400%;
 
@@ -29,7 +33,6 @@ body {
    -moz-animation: Animation 12s ease infinite;
    animation: Animation 12s ease infinite;
 }
-
 
 @keyframes Animation {
    0% {
@@ -84,7 +87,7 @@ span.emoji {
 }
 
 .hastag--list li:hover {
-   transition: all 0.25s ease-out;
+   transition: var(--transition);
    color: #fff;
    font-weight: 700;
 }
@@ -100,7 +103,7 @@ span.emoji {
 }
 
 .hastag--list li:hover::after {
-   transition: all 0.25s ease-out;
+   transition: var(--transition);
    width: 100%;
 }
 
@@ -115,7 +118,7 @@ span.emoji {
 }
 
 .social--list li a:hover {
-   transition: all 0.25s ease;
+   transition: var(--transition);
    background-size: 100% 1.75rem;
    font-weight: 700;
 }
