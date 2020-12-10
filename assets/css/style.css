@@ -22,13 +22,10 @@ body {
    line-height: 1.7;
    letter-spacing: 0.1rem;
    min-width: 320px;
-   width: 100vw;
-   height: 100vh;
-   overflow: hidden;
-   
+   min-height: 96vh;
+
    background: linear-gradient(224deg, #6315e8, #3d0a94);
    background-size: 400% 400%;
-
    -webkit-animation: Animation 12s ease infinite;
    -moz-animation: Animation 12s ease infinite;
    animation: Animation 12s ease infinite;
@@ -49,10 +46,11 @@ body {
 .container {
    width: 1140px;
    margin: 2rem auto;
-   padding: 0 0.8rem;
+   padding: 0 0.7rem;
    display: flex;
    justify-content: center;
    align-items: center;
+
 }
 
 .content {
@@ -61,7 +59,7 @@ body {
    flex-direction: column;
    flex-wrap: wrap;
    color: #f2f2f2;
-   font-size: 1.2rem;
+   font-size: 1.15rem;
 }
 
 span.emoji {
