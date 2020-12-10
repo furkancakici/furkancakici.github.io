@@ -13,58 +13,61 @@ a {
    color: inherit;
 }
 
-@font-face {
-   font-family: "Didact Gothic",sans-serif;
-   src: url("assets/font/DidactGothic-Regular.ttf") format("ttf");
- }
-
 body {
-   width: 100%;
-   height: 100vh;
+   font-family: 'Didact Gothic', sans-serif;
    background-color: #273c75;
    line-height: 1.7;
    letter-spacing: 0.1rem;
-   font-family: "Didact Gothic",sans-serif;
+   min-width: 320px;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+   background: linear-gradient(224deg, #6315e8, #3d0a94);
+   background-size: 400% 400%;
+
+   -webkit-animation: Animation 12s ease infinite;
+   -moz-animation: Animation 12s ease infinite;
+   animation: Animation 12s ease infinite;
+}
+
+
+@keyframes Animation {
+   0% {
+      background-position: 96% 0%;
+   }
+   50% {
+      background-position: 5% 100%;
+   }
+   100% {
+      background-position: 96% 0%;
+   }
 }
 
 .container {
    width: 1140px;
-   height: 100%;
-   margin: 0 auto;
-   padding: 0 .8rem;
-   min-width: 320px;
-   display: flex;
-   justify-content: center;
-   align-items: flex-start;
-}
-
-.bio {
-   width: 980px;
+   margin: 2rem auto;
+   padding: 0 0.8rem;
    display: flex;
    justify-content: center;
    align-items: center;
+}
+
+.content {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
    color: #f2f2f2;
    font-size: 1.2rem;
 }
 
-.bio .emoji {
-   font-size: 2.2rem;
-   margin: .2rem 0;
+span.emoji {
+   font-size: 1.8rem;
 }
 
-.bio .name {
-   border-bottom: 1px solid #58c9b9;
-   transition: all 0.2s;
-}
-
-.bio .name:hover {
-   border-bottom: 2px dashed #58c9b9;
-   cursor: pointer;
-}
-
-.bio p{
-   margin: 1rem 0;
-   font-weight: 900;
+.content p {
+   margin: 0.5rem 0;
+   font-weight: 600;
 }
 
 .list {
@@ -72,57 +75,56 @@ body {
    list-style-type: none;
 }
 
-.hastag--list li{
+.hastag--list li {
    display: inline-block;
    color: #c9d6de;
    position: relative;
-   margin-right: .4rem;
-   transition: all 0.25s ease;
+   margin-right: 0.4rem;
    cursor: default;
 }
 
-.hastag--list li:hover{
+.hastag--list li:hover {
+   transition: all 0.25s ease-out;
    color: #fff;
    font-weight: 700;
 }
 
-.hastag--list li::after{
-   content: "";
+.hastag--list li::after {
+   content: '';
    position: absolute;
    top: 1.75rem;
    left: 0;
    width: 25%;
-   height: .3rem;
+   height: 0.3rem;
    background-color: #e97f02;
-   transition: all 0.25s ease;
 }
 
-.hastag--list li:hover::after{
+.hastag--list li:hover::after {
+   transition: all 0.25s ease-out;
    width: 100%;
 }
 
-
-.social--list li a{
+.social--list li a {
    display: inline-block;
-   font-size: 1.2rem;
+   font-size: 1.1rem;
 
    background-image: linear-gradient(#e97f04, #e97f02);
    background-repeat: no-repeat;
    background-size: 100% 0.45rem;
    background-position: 0 85%;
-   transition: all 0.25s ease;
 }
 
-.social--list li a:hover{
+.social--list li a:hover {
+   transition: all 0.25s ease;
    background-size: 100% 1.75rem;
    font-weight: 700;
 }
 
-
 /* Mobile */
 
-@media only screen and (min-width: 320px) and (max-width: 1280px) {
+@media only screen and (max-width: 768px) {
    .container {
       width: 100%;
+      margin: 0 auto;
    }
 }
