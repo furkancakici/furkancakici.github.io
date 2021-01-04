@@ -44,13 +44,12 @@ body {
 }
 
 .container {
-   width: 1140px;
+   width: 960px;
    margin: 2rem auto;
    padding: 0 0.7rem;
    display: flex;
    justify-content: center;
    align-items: center;
-
 }
 
 .content {
